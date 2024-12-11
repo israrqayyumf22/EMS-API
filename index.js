@@ -18,7 +18,10 @@ import connectToDatabase from './db/db.js'
 
 connectToDatabase() 
 const app = express() // we created object of the express named app
-app.use(cors())
+app.use(cors({
+    origin: "https://ems-front-end-lake.vercel.app/login",
+    credentials: true
+}))
 app.use(express.json())
 app.use(express.static('public/uploads'))//images we stored called them.
 app.use('/api/auth', authRouter)
