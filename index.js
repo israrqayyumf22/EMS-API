@@ -19,7 +19,7 @@ import connectToDatabase from './db/db.js'
 connectToDatabase() 
 const app = express() // we created object of the express named app
 app.use(cors({
-    origin: "https://ems-front-end-lake.vercel.app/login",
+    origin: "https://ems-front-end-lake.vercel.app",
     credentials: true
 }))
 app.use(express.json())
