@@ -17,9 +17,10 @@ import dashboardRouter from './routes/dashboard.js'
 import connectToDatabase from './db/db.js'
 
 connectToDatabase() 
+const cors= require("cors");
 const app = express() // we created object of the express named app
 app.use(cors({
-    origin: "https://ems-front-end-lake.vercel.app",
+    origin: ["https://ems-front-end-lake.vercel.app/login","http://localhost:3000","https://ems-front-end-lake.vercel.app"],
     credentials: true
 }))
 app.use(express.json())
