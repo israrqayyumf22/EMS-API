@@ -20,7 +20,7 @@ connectToDatabase()
 const app = express() // we created object of the express named app
 app.use(express.json())
 app.use(cors({
-    origin: "https://ems-front-end-lake.vercel.app",
+    origin: "https://ems-frontend-coral.vercel.app",
     credentials: true
 }))
 app.use(express.static('public/uploads'))//images we stored called them.
